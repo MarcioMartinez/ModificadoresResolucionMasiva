@@ -27,6 +27,9 @@ Partial Class Form1
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TxtNombre = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.CboFormato = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PbImagen = New System.Windows.Forms.PictureBox()
@@ -34,9 +37,9 @@ Partial Class Form1
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TxtNombre = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.CboResolucionesAlmacenadas = New System.Windows.Forms.ComboBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PbImagen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -72,6 +75,9 @@ Partial Class Form1
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.Button3)
+        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Controls.Add(Me.CboResolucionesAlmacenadas)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.TxtNombre)
         Me.Panel1.Controls.Add(Me.Label2)
@@ -86,8 +92,38 @@ Partial Class Form1
         Me.Panel1.Size = New System.Drawing.Size(185, 499)
         Me.Panel1.TabIndex = 8
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(4, 277)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(136, 13)
+        Me.Label3.TabIndex = 14
+        Me.Label3.Text = "Nombre Nueva Imagen"
+        '
+        'TxtNombre
+        '
+        Me.TxtNombre.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtNombre.Location = New System.Drawing.Point(7, 293)
+        Me.TxtNombre.Name = "TxtNombre"
+        Me.TxtNombre.Size = New System.Drawing.Size(173, 27)
+        Me.TxtNombre.TabIndex = 13
+        Me.TxtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(4, 328)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(55, 13)
+        Me.Label2.TabIndex = 12
+        Me.Label2.Text = "Formato"
+        '
         'CboFormato
         '
+        Me.CboFormato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboFormato.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold)
         Me.CboFormato.FormattingEnabled = True
         Me.CboFormato.Items.AddRange(New Object() {"PNG", "JPEG", "ICON", "GIF", "BMP"})
@@ -139,34 +175,37 @@ Partial Class Form1
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
-        'Label2
+        'Label4
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(4, 328)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(55, 13)
-        Me.Label2.TabIndex = 12
-        Me.Label2.Text = "Formato"
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(4, 378)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(159, 13)
+        Me.Label4.TabIndex = 16
+        Me.Label4.Text = "Resoluciones almacenadas"
         '
-        'Label3
+        'CboResolucionesAlmacenadas
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(4, 277)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(136, 13)
-        Me.Label3.TabIndex = 14
-        Me.Label3.Text = "Nombre Nueva Imagen"
+        Me.CboResolucionesAlmacenadas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CboResolucionesAlmacenadas.DropDownWidth = 400
+        Me.CboResolucionesAlmacenadas.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.CboResolucionesAlmacenadas.FormattingEnabled = True
+        Me.CboResolucionesAlmacenadas.Items.AddRange(New Object() {"PNG", "JPEG", "ICON", "GIF", "BMP"})
+        Me.CboResolucionesAlmacenadas.Location = New System.Drawing.Point(7, 394)
+        Me.CboResolucionesAlmacenadas.Name = "CboResolucionesAlmacenadas"
+        Me.CboResolucionesAlmacenadas.Size = New System.Drawing.Size(133, 27)
+        Me.CboResolucionesAlmacenadas.TabIndex = 15
         '
-        'TxtNombre
+        'Button3
         '
-        Me.TxtNombre.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtNombre.Location = New System.Drawing.Point(7, 293)
-        Me.TxtNombre.Name = "TxtNombre"
-        Me.TxtNombre.Size = New System.Drawing.Size(173, 27)
-        Me.TxtNombre.TabIndex = 13
-        Me.TxtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.Button3.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(146, 394)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(34, 27)
+        Me.Button3.TabIndex = 17
+        Me.Button3.Text = "X"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -201,4 +240,7 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents TxtNombre As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents CboResolucionesAlmacenadas As ComboBox
+    Friend WithEvents Button3 As Button
 End Class
